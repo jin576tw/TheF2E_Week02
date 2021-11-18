@@ -5,12 +5,16 @@ import Navbar from "./components/Navbar.vue"
 import Footer from "./components/Footer.vue"
 import FindStation_page from "./components/FindStation_page.vue"
 
+import 'animate.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
+
+
 
 
 import axios from 'axios' 
@@ -22,6 +26,8 @@ window.$ = $;
 
 const jsSHA = require("jssha")
 const app = createApp(App);
+
+  
 
 app.component('navbar',Navbar)
 app.component('Footer',Footer)

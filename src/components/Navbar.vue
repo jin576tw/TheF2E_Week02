@@ -5,7 +5,7 @@
                 <div class="navLogo">
 
                     <img src="../assets/images/logo_yellow.png" alt="">
-                    <h5>Bike Fun！自行車旅遊網</h5>
+                    <h5 class="animate__animated animate__bounce">Bike Fun！自行車旅遊網</h5>
               
                 </div>
                 <div class="navItemWarp">
