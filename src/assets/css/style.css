@@ -85,254 +85,257 @@ label{
 
 @media (max-width: 767px) { }
 
+
+/* //////////////////////////////// */
+
 .Window{
-    height: calc(100vh - 80px);
-    overflow: hidden;
+    position: relative;
 }
 
 .Background{
     position: fixed;
+    z-index: 996;
+    height: 100vh;
     width: 100%;
-    height: 100%;
     background-image: url('../images/bg01.jpg');
-    /* background-color: white; */
-
-    z-index: 997
-}
-.Contenet{
-    position: relative;
-    z-index: 998;
-    width: 100%;
-
-
-}
-.BG_space{
-    /* height: calc(100vh - 100px); */
-    /* height: 100px; */
-    height: 0px;
-    transition: 0.8s;
-    background-color: transparent;
-}
-
-.Bf_Contenet{
-    overflow: hidden;
-
-    background-color: white;
-    /* background-color: transparent; */
-    width: 100%;
-    /* height: calc(100vh - 80px); */
-
-}
-
-.Contenet_page{
-    height: calc(100vh - 180px);
-    background-color: white;
-}
-
-
-/* /////////////尋找站點///////// */
-.FindStaion_Page{
-    width: 100%;
-    height: 100%;
-    background-color: cyan;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.FindStaion_cover{
-    /* width: 62.5%; */
-    width: 0%;
-    height: 100%;
- 
-    background-image: url('../images/bg03.jpg');
     background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 767px) { 
+
+    .Background{
+        height: 100vh;
+        width: 100%;
+        background-image: url('../images/bg01.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+}
+
+.Content{
+    position: relative;
+    width: 100%;
+    z-index: 996;
+}
+
+.BG_space{
+    width: 100%;
+    /* height: calc(100vh - 100px); */
+    background-color: transparent
+}
+
+.Bf_Content{
+
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    background-color:transparent
+
+}
+
+@media (max-width: 767px) {
+
+    .Bf_Content{
+
+        width: 100%;
+        min-height: calc(100vh - 80px);
+        background-color:transparent
+    
+    }
+
+
+
+}
+
+/* 尋找站點頁 */
+
+#FindStationPage{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.FindStationCover{
+    width: 62.5%;
+    /* width: 0%; */
+    transition: 0.8s;
+    height: calc(100vh - 180px);
+    background-image: url('../images/bg03.jpg');
+    background-size:cover;
     background-position:center;
     background-repeat: no-repeat;
+
 }
 
-.FindStaion_bar{
-    /* width: 37.5%; */
-    width: 25%;
-    height: 100%;
-    background-color: #fff;
-   
+.FindStationBar{
+    width: 37.5%;
+    /* width: 25%; */
+    transition: 0.8s;
+    min-height: calc(100vh - 180px);
+    background-color: white;
 }
 
-.FindStaion_map{
+.stationStep{
+    width: 37.5%;
+    /* width: 75%; */
+    position: absolute;
+    transition: 0.8s;
+    top: 0;
+    right: 0;
+
+    height: 50px;
+    background-color: cyan;
+}
+
+.FindStationMap{
     width: 0%;
-    width: 75%;
-    height: 100%;
+    /* width: 75%; */
+    min-height: calc(100vh - 180px);
     background-color: #afa;
 }
 
-.FindStaion_list{
-    width: 100%
-}
-
-.Staion_list_title{
-    height: 75px;
-    background-color: var(--bYellow);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.Staion_list_title h3{
-
-    font-size: 1.8rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 18px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #fff;
-
-}
-
-.FindStaion_listWarp{
-    overflow: auto;
-    height: calc(100vh - 255px);
+.FindStation_list{
+    display: none;
+    /* display: block; */
+    margin-top: 0px;
     width: 100%;
+    background-color: pink;
+    min-height:  calc(100vh - 180px);
 }
 
-.Staion_list{
-    height: 75px;
-    border-bottom: 1px solid #DADADA;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.Staion_list h3{
-    color:var(--bBlack);
-    font-size: 1.8rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 18px;
-    letter-spacing: 0em;
+.FindStation_searchBar{
+    display: block;
+    /* display: none; */
+    margin-top: 50px;
+    width: 100%;
+    min-height:  calc(100vh - 230px);
+    background-color: yellow;
 
 }
 
-.Staion_list h4{
 
-    font-size: 1.4rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 18px;
-    letter-spacing: 0em;
+@media (max-width: 767px) { 
+
+    #FindStationPage{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .FindStationCover{
+        width: 100%;
+        height: 100vh;
+        /* height: 85px; */
+        background-image: url('../images/bg03.jpg');
+        background-size:cover;
+        background-position:-30px;
+        background-repeat: no-repeat;
+
+    }
+
+
+
+    .FindStationBar{
+        position: relative;
+        width: 100%;
+        min-height: 500px;
+        /* min-height:  calc(100vh - 165px); */
+        
+        background-color: white;
+    }
+
+
+    .stationStep{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: cyan;
+    }
+
+
+
+    .FindStationMap{
+        display: none;
+        /* display: block; */
+        position: absolute;
+        top: 135px;
+        width: 100%;
+        min-height: 300px;
+        background-color: #afa;
+    }
+
+    .FindStation_list{
+        display: none;
+        /* display: block; */
+        margin-top: 350px;
+        width: 100%;
+        background-color: pink;
+        min-height:  calc(100vh - 515px);
+    }
+
+    .FindStation_searchBar{
+        display: block;
+        /* display: none; */
+        margin-top: 50px;
+        width: 100%;
+        min-height:  450px;
+        background-color: yellow;
+    
+    }
 
 }
 
-.safe_station{
-    color: var(--bGreen);
-}
 
-.danger_station{
+/* //////////////navbar///////////////// */
 
-    color: var(--bRed);
 
-}
-
-.stop_station{
-    color: var(--light_grey);
-}
-
-/* ///////////////導覽列////////////// */
 .Navbar{
-
-    border-radius: 50px 50px 0px 0px;
     height: 100px;
-    border-bottom: 1px solid #E5E5E5;
-    background-color: white;
-    
-}
-.Navbar_warp{
-    /* background-color: red; */
     width: 100%;
-    height: 100px;
-    display: flex;
-    
-}
-.navLogo{
-    height: 100%;
-    width: 25%;
-    /* background-color: cyan; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-right: 1px solid #E5E5E5;
-    
+    background-color: white;
+    border-radius: 50px 50px 0px 0px;
 }
 
-.navLogo img{
-    width: 35%;
-}
-
-.navLogo h5{
-    /* font-family: PingFang TC; */
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 14px;
-    letter-spacing: 0.15em;
-    text-align: left;
-
-}
-
-.navItemWarp{
-    display: flex;
-    height: 100%;
-    width: 75%;
-    /* background-color: yellow; */
-}
-
-.navItem{
-    cursor: pointer;
-    height: 100%;
-    width: 25%;
-    /* background-color: orange; */
-    border-right: 1px solid #E5E5E5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--bGrey);
-}
-
-.navItem:hover{
-    transition: 0.8s;
-    color: var(--bYellow);
-}
-
-.navItem h4{
-    font-size: 1.6rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0em;
-    text-align: left;
+.NavbarRWD{
+    position: absolute;
+    z-index: 997;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color:transparent;
+  
+    border-bottom: 1px solid var(--light_grey)
     
 }
 
-.navItem.nav-active{
+.navbarRWDHide{
+    display: none;
+}
 
-    color: var(--bYellow);
+@media (max-width: 767px) { 
+
+    .navbarHide{
+        display: none;
+    }
+
+    .navbarRWDHide{
+        display: block;
+    }
+
 
 }
-/* ////////////////footer/////////// */
+
+
+/* /////////footer///////////// */
 .footer{
     position: relative;
-    z-index: 998;
-    width: 100%;
+    z-index: 996;
     height: 80px;
-    background-color: #E1AB43;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FFFFFF;
-
+    width: 100%;
+    background-color: var(--bYellow);
 }
-
-

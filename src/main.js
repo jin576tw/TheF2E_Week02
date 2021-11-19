@@ -1,8 +1,8 @@
 import { createApp } from "vue";
 
 import App from "./App.vue";
-import Navbar from "./components/Navbar.vue"
-import Footer from "./components/Footer.vue"
+// import Navbar from "./components/Navbar.vue"
+// import Footer from "./components/Footer.vue"
 
 
 import 'animate.css'
@@ -25,8 +25,7 @@ const jsSHA = require("jssha")
 const app = createApp(App);
 
 
-app.component('navbar',Navbar)
-app.component('Footer',Footer)
+
 
 
 app.use(VueAxios, axios)

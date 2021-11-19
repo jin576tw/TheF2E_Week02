@@ -1,33 +1,50 @@
 <template>
-  <div class="Window">
-    <section class="Background"></section>
-    <section class="Contenet">
-      <div class="BG_space"></div>
-      <div class="Bf_Contenet">
-
-        <navbar></navbar>
-
-        <div class="Contenet_page">
-
-            <find-station-page></find-station-page>
 
 
-  
+    <div class="Window">
+      <div class="NavbarRWD navbarRWDHide"></div>
+      <div class="Background"></div>
+
+
+      <div class="Content">
+        <div class="BG_space"></div>
+        <div class="Bf_Content">
+        
+          <div class="Navbar navbarHide"></div>
+          
+
+          <div class="BfPage FindStationPage" id="FindStationPage">
+            <div class="FindStationCover">
+              
+            </div>
+            <div class="FindStationBar">
+              <div class="stationStep"></div>
+              <div class="FindStation_list"></div>
+              <div class="FindStation_searchBar"></div>
+            </div>
+
+
+            <div class="FindStationMap" id="FindStationMap"></div>
+
+          </div>
         </div>
 
-      
       </div>
-    </section>
-  </div>
+      
+    </div>
+    <div class="footer">
 
-  <Footer></Footer>
+    </div>
+
+
+
 </template>
 
 <script>
 
 import jsSHA from "jssha"   
 
-import FindStation_page from "./components/FindStation_page.vue"
+// import FindStation_page from "./components/FindStation_page.vue"
 
 function getAuthorizationHeader() {
 
@@ -57,7 +74,7 @@ export default {
 
   components:{
 
-  'find-station-page':FindStation_page
+  // 'find-station-page':FindStation_page
 
 
   },
@@ -66,14 +83,34 @@ export default {
     return{
 
       TPXData:[],
-      
+      nowPage:'',
+      navbarRWDHide: true
+
       
 
     }
 
 
+  },computed:{
+
+
+    // PageNow(){
+
+
+    //     if(this.nowPage == 'Search'){
+
+    //       this.navbarRWDHide = true
+
+    //     }
+
+    //     return this.nowPage
+    // }
+
+
   }
   ,methods:{
+
+    
 
     getdata(){
 
