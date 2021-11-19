@@ -27,6 +27,8 @@
 
 import jsSHA from "jssha"   
 
+import FindStation_page from "./components/FindStation_page.vue"
+
 function getAuthorizationHeader() {
 
  
@@ -47,8 +49,18 @@ function getAuthorizationHeader() {
     '"';
   return { Authorization: Authorization, "X-Date": GMTString };
 }
+
+
+
+
 export default {
 
+  components:{
+
+  'find-station-page':FindStation_page
+
+
+  },
   data(){
 
     return{
