@@ -159,7 +159,7 @@ label{
 .FindStationCover{
     width: 62.5%;
     /* width: 0%; */
-    transition: 0.8s;
+    transition: 0.6s;
     height: calc(100vh - 180px);
     background-image: url('../images/bg03.jpg');
     background-size:cover;
@@ -168,124 +168,238 @@ label{
 
 }
 
-.FindStationBar{
+
+.FindStation_SearchWarp{
+    position: relative;
+    transition: 0.6s;
     width: 37.5%;
+    /* width: 100%; */
+    height: calc(100vh - 180px);
+    display: flex;
+
+}
+
+
+.FindStationBar{
+    position: relative;
+    transition: 0.6s;
+    width: 100%;
     /* width: 25%; */
-    transition: 0.8s;
-    min-height: calc(100vh - 180px);
+    height: 100%;
     background-color: white;
 }
 
-.stationStep{
-    width: 37.5%;
-    /* width: 75%; */
-    position: absolute;
-    transition: 0.8s;
-    top: 0;
-    right: 0;
 
-    height: 50px;
-    background-color: cyan;
-}
 
 .FindStationMap{
     width: 0%;
     /* width: 75%; */
-    min-height: calc(100vh - 180px);
+    height: 100%;
     background-color: #afa;
+
+
 }
 
-.FindStation_list{
+
+.StationStep{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    height: 50px;
+    background-color: cyan;
+
+}
+
+
+
+.StationSearchContent{
+    display: block;
+    transition: 0.6s;
+    /* display: none; */
+    width: 100%;
+    margin-top: 50px;
+    min-height: calc(100vh - 230px);
+    background-color: yellow;
+}
+
+
+.StationList{
     display: none;
     /* display: block; */
-    margin-top: 0px;
-    width: 100%;
-    background-color: pink;
-    min-height:  calc(100vh - 180px);
-}
-
-.FindStation_searchBar{
-    display: block;
-    /* display: none; */
     margin-top: 50px;
     width: 100%;
-    min-height:  calc(100vh - 230px);
-    background-color: yellow;
+    min-height: calc(100vh - 230px);
+    background-color: pink;
+}
+
+.FindStaion_Btn{
+
+    width: 120px;
+    height: 40px;
+    background: #A3C896;
+    border-radius: 8px;
+
+
+}
+.coverMove{
+
+    width: 0%;
+
+}
+
+.SearchWarpMove{
+
+    width: 100%;
+  
+}
+
+
+.StationBarMove{
+
+    width: 25%;
 
 }
 
 
+
+.StationMapMove{
+
+    width: 75%;
+
+}
+
+.StationStepMove{
+  
+    width: 75%;
+}
+
+.SearchContentMove{
+
+    display: none;
+}
+
+
+.StationListMove{
+
+     display: block;
+
+}
+
 @media (max-width: 767px) { 
+
 
     #FindStationPage{
         width: 100%;
         display: flex;
         flex-direction: column;
+        position: relative;
     }
-
 
     .FindStationCover{
         width: 100%;
+ 
         height: 100vh;
         /* height: 85px; */
         background-image: url('../images/bg03.jpg');
         background-size:cover;
         background-position:-30px;
         background-repeat: no-repeat;
-
+    
     }
-
-
 
     .FindStationBar{
+        width: 100%;
+    }
+
+
+    .FindStation_SearchWarp{
         position: relative;
         width: 100%;
-        min-height: 500px;
-        /* min-height:  calc(100vh - 165px); */
-        
-        background-color: white;
+        height: calc(100vh - 165px);
+        display: flex;
+        flex-direction: column;
+
+    
     }
-
-
-    .stationStep{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 50px;
-        background-color: cyan;
-    }
-
 
 
     .FindStationMap{
-        display: none;
-        /* display: block; */
         position: absolute;
-        top: 135px;
-        width: 100%;
-        min-height: 300px;
+        width: 0%;
+        /* width: 100%; */
+        top: 50px;
+        left: 0;
+        height: 350px; 
         background-color: #afa;
-    }
-
-    .FindStation_list{
-        display: none;
-        /* display: block; */
-        margin-top: 350px;
-        width: 100%;
-        background-color: pink;
-        min-height:  calc(100vh - 515px);
-    }
-
-    .FindStation_searchBar{
-        display: block;
-        /* display: none; */
-        margin-top: 50px;
-        width: 100%;
-        min-height:  450px;
-        background-color: yellow;
+    
     
     }
+
+    .StationSearchContent{
+        display: block;
+        /* display: none; */
+        width: 100%;
+        margin-top: 50px;
+        min-height: calc(100vh - 215px);
+        background-color: yellow;
+    }
+
+    .StationList{
+       
+        display: none;
+        /* display: block; */
+        margin-top: 400px;
+        width: 100%;
+        min-height: calc(100vh - 565px);
+        background-color: pink;
+    }
+
+
+    .coverMove{
+
+        width: 100%;
+        height: 85px;
+    
+    }
+    
+    .SearchWarpMove{
+    
+        width: 100%;
+      
+    }
+    
+    
+    .StationBarMove{
+    
+        width: 100%;
+    
+    }
+    
+    
+    .StationMapMove{
+    
+        width: 100%;
+    
+    }
+    
+    .StationStepMove{
+        width: 100%;
+    }
+    
+    .SearchContentMove{
+    
+        display: none;
+    }
+    
+    
+    .StationListMove{
+    
+         display: block;
+    
+    }
+  
+   
 
 }
 
@@ -297,23 +411,76 @@ label{
     height: 100px;
     width: 100%;
     background-color: white;
+    display: flex;
     border-radius: 50px 50px 0px 0px;
+    border-bottom: 1px solid var(--light_grey);
+}
+.navbarLogo{
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid var(--light_grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 }
 
-.NavbarRWD{
-    position: absolute;
-    z-index: 997;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 85px;
-    background-color:transparent;
-  
-    border-bottom: 1px solid var(--light_grey)
+.navbarLogo img{
+    width: 35%;
+}
+
+.navbarLogo h5{
+   
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 14px;
+    letter-spacing: 0.15em;
+
     
 }
+.navbarItemWarp{
+    display: flex;
+    width: 75%;
+    height: 100%;
+    /* background-color: cyan; */
+}
+.navbarItem{
+    width: 25%;
+    height: 100%;
+    cursor: pointer;
+    border-right: 1px solid var(--light_grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:  var(--bGrey);
+   
+}
+
+.navbarItem h3{
+
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+
+}
+
+.navbarItem:hover{
+    transition: 0.8s;
+    color: var(--bYellow);
+}
+
 
 .navbarRWDHide{
+    display: none;
+}
+
+.RWD_btn{
     display: none;
 }
 
@@ -323,13 +490,99 @@ label{
         display: none;
     }
 
+  
+
+    .Navbar{
+        height: 85px;
+       
+    }
+
+    .navbarItemWarp{
+        display: none;
+        width: 75%;
+        height: 100%;
+    }
+    .RWD_btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        height: 100%;
+        border-right: 1px solid var(--light_grey);
+    }
+
+    .navbarLogo{
+        width: 70%;
+        height: 100%;
+        border-right: 1px solid var(--light_grey);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        padding-right: 20px;
+    
+    }
+    
+    .navbarLogo img{
+        width: 65%;
+    }
+}
+
+
+
+.NavbarRWD{
+    position: absolute;
+    z-index: 997;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color:transparent;
+    border-bottom: 1px solid var(--light_grey);
+
+    
+}
+
+.NavbarRWD_wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.navbarRWDLogo{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.navbarRWDLogo img{
+    width: 65%;
+}
+
+.navbarRWDLogo h5{
+   
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 14px;
+    letter-spacing: 0.15em;
+
+    
+}
+
+@media (max-width: 767px) { 
+
     .navbarRWDHide{
         display: block;
     }
 
-
 }
-
 
 /* /////////footer///////////// */
 .footer{

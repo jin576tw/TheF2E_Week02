@@ -1,32 +1,21 @@
 <template>
 
-
     <div class="Window">
-      <div class="NavbarRWD navbarRWDHide"></div>
-      <div class="Background"></div>
+      
+      <navbar-rwd></navbar-rwd>
 
+      <div class="Background"></div>
 
       <div class="Content">
         <div class="BG_space"></div>
+
         <div class="Bf_Content">
         
-          <div class="Navbar navbarHide"></div>
+          <navbar></navbar>
           
+          <find-station-page></find-station-page>
 
-          <div class="BfPage FindStationPage" id="FindStationPage">
-            <div class="FindStationCover">
-              
-            </div>
-            <div class="FindStationBar">
-              <div class="stationStep"></div>
-              <div class="FindStation_list"></div>
-              <div class="FindStation_searchBar"></div>
-            </div>
-
-
-            <div class="FindStationMap" id="FindStationMap"></div>
-
-          </div>
+          
         </div>
 
       </div>
@@ -83,8 +72,9 @@ export default {
     return{
 
       TPXData:[],
-      nowPage:'',
-      navbarRWDHide: true
+      nowPage:'FindStation'
+    
+     
 
       
 
@@ -110,6 +100,14 @@ export default {
   }
   ,methods:{
 
+
+    SearchStation(){
+
+      this.searchPage = ! this.searchPage
+
+      console.log( this.searchPage);
+
+    },
     
 
     getdata(){

@@ -25,11 +25,19 @@ const jsSHA = require("jssha")
 const app = createApp(App);
 
 
-
-
-
 app.use(VueAxios, axios)
 app.use(jsSHA)
+
+
+
+
+import NavbarRWD from './components/NavbarRWD.vue'
+import Navbar from './components/Navbar.vue'
+import FindStationPage from './components/FindStationPage.vue'
+
+app.component('navbar-rwd',NavbarRWD)
+app.component('navbar',Navbar)
+app.component('find-station-page',FindStationPage)
 
 
 app.mount("#app");
