@@ -97,9 +97,10 @@ label{
     z-index: 996;
     height: 100vh;
     width: 100%;
-    background-image: url('../images/bg01.jpg');
+    /* background-image: url('../images/bg01.jpg'); */
     background-size: cover;
     background-position: center;
+    background-color: #fff;
 }
 
 @media (max-width: 767px) { 
@@ -156,22 +157,106 @@ label{
     position: relative;
 }
 
+@media (max-width: 767px) { 
+
+
+    #FindStationPage{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+   
+}
+
 .FindStationCover{
+    position: relative;
+    overflow: hidden;
     width: 62.5%;
     /* width: 0%; */
-    transition: 0.6s;
+    transition: 0.8s;
     height: calc(100vh - 180px);
     background-image: url('../images/bg03.jpg');
     background-size:cover;
     background-position:center;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
 
 }
 
 
+
+
+.FindStationCover_logo{
+    min-width: 650px;
+    width: 650px;
+    margin-left: 80px;
+
+
+
+}
+.logo_pic{
+    width: 520px
+
+}
+
+.FindStationCover_logo h4{
+    text-align: right;
+    color: white;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0.15em;
+
+
+}
+
+@media (max-width: 767px) {
+
+    
+    .FindStationCover{
+        transition: 0s;
+        width: 100%;
+        height: 100vh;
+        background-image: url('../images/bg03.jpg');
+        background-size:cover;
+        background-position:-30px;
+        background-repeat: no-repeat;
+        justify-content: center
+    }
+
+    .FindStationCover_logo{
+        min-width: 300px;
+        width: 300px;
+        margin-left: 0px;
+     
+
+
+    }
+
+    .logo_pic{
+        width: 100%;
+      
+    }
+
+    .FindStationCover_logo h4{
+        text-align:center;
+        color: white;
+
+    
+    }
+
+
+}
+
 .FindStation_SearchWarp{
     position: relative;
-    transition: 0.6s;
+    transition: 0.8s;
     width: 37.5%;
     /* width: 100%; */
     height: calc(100vh - 180px);
@@ -182,7 +267,7 @@ label{
 
 .FindStationBar{
     position: relative;
-    transition: 0.6s;
+    transition: 0.8s;
     width: 100%;
     /* width: 25%; */
     height: 100%;
@@ -191,14 +276,6 @@ label{
 
 
 
-.FindStationMap{
-    width: 0%;
-    /* width: 75%; */
-    height: 100%;
-    background-color: #afa;
-
-
-}
 
 
 .StationStep{
@@ -207,41 +284,353 @@ label{
     top: 0;
     right: 0;
     height: 50px;
-    background-color: cyan;
+
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
 
 }
 
+.StationStep h4{
+    position: relative;
+    margin-right: 30px;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #5C5C5C;
+ 
+
+}
+
+.StationStep h4:last-child{
+    color: var(--bGreen)
+}
+
+.stepArrow{
+    position: absolute;
+    top: -2%;
+    right: -25px;
+    width: 20px;
+    height: 20px;
+
+
+}
+
+.StationStep h4:last-child .stepArrow{
+    display: none;
+}
 
 
 .StationSearchContent{
     display: block;
-    transition: 0.6s;
+    transition: 0.8s;
     /* display: none; */
     width: 100%;
     margin-top: 50px;
     min-height: calc(100vh - 230px);
-    background-color: yellow;
+
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: var(--bBlack);
+}
+.SearchStation_title{
+
+    border-left: 3px solid var(--bYellow);
+    padding-left: 8px;
+    margin-bottom: 60px;
+}
+.SearchStation_title h1{
+
+    font-size: 2.4rem;
+    color: var(--bYellow);
+}
+.SearchStation_title h3{
+
+   
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+
+    
 }
 
+.AutoPosition{
+    margin-bottom: 40px;
+}
+.AutoPosition h3{
+    
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
 
-.StationList{
-    display: none;
-    /* display: block; */
-    margin-top: 50px;
+
+}
+
+.StationInput{
+    width: 60%;
+    margin-bottom: 40px;
+}
+
+.StationInput h3{
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+
+}
+
+.StationInput input{
     width: 100%;
-    min-height: calc(100vh - 230px);
-    background-color: pink;
+    height: 45px;
+    border: 1px solid #DADADA;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    padding-left: 10px;
+
 }
 
+
+.AutoPosition_btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 120px;
+    height: 45px;
+    background-color: var(--light_grey);
+    border-radius: 100px;
+
+}
+
+.btn_switch{
+    cursor: pointer;
+    position: absolute;
+    right: 4px;
+    width: 39px;
+    height: 39px;
+    border-radius: 100px;
+    background-color: white;
+}
+
+
+.FindStaion_BtnWarp{
+    margin-top: 40px;
+    width: 60%;
+}
 .FindStaion_Btn{
 
     width: 120px;
     height: 40px;
     background: #A3C896;
     border-radius: 8px;
+    color: white;
+    float: right;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    
+}
+
+@media (max-width: 767px) {
+
+    .StationStep{
+        padding: 0 10px;
+    
+    }
+
+
+    .FindStation_SearchWarp{
+        position: relative;
+        width: 100%;
+        height: calc(100vh - 165px);
+        display: flex;
+        flex-direction: column;
+
+    
+    }
+
+    .FindStationBar{
+        width: 100%;
+    }
+
+
+    .StationSearchContent{
+        display: block;
+        /* display: none; */
+        width: 100%;
+        margin-top: 50px;
+        min-height: calc(100vh - 215px);
+
+    }
+
+
+    .SearchStation_title{
+
+        border-left: 3px solid var(--bYellow);
+        padding-left: 8px;
+        margin-bottom: 40px;
+    }
+
+    .StationInput{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+
+    .FindStaion_BtnWarp{
+        margin-top: 60px;
+        width: 100%;
+    }
 
 
 }
+
+.StationListContent{
+    display: none;
+    display: block;
+    margin-top: 50px;
+    width: 100%;
+    min-height: calc(100vh - 230px);
+    background-color: pink;
+}
+
+.StationList_title{
+    background-color: var(--bYellow);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.StationList_title h3{
+
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+
+
+}
+
+.StationList_warp{
+    width: 100%;
+    height: calc(100vh - 280px);
+    background-color: white;
+    overflow: auto;
+}
+
+.StationList{
+    width: 100%;
+    height: 75px;
+    background-color: white;
+    border-bottom: 1px solid var(--light_grey);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.StationList h3{
+    color: var(--bBlack);
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+
+}
+
+@media (max-width: 767px) { 
+
+    .StationListContent{
+        display: none;
+        display: block;
+        margin-top: 370px;
+        width: 100%;
+        min-height: calc(100vh - 535px);
+        background-color: pink;
+    }
+
+    .StationList_warp{
+
+        height: calc(100vh - 585px);
+
+
+    }
+
+
+}
+
+.FindStationMap{
+    width: 0%;
+    transition: 0.8s;
+    height: 100%;
+    background-color: #afa;
+
+
+}
+
+@media (max-width: 767px) { 
+
+
+    .FindStationMap{
+        position: absolute;
+        width: 0%;
+        top: 50px;
+        left: 0;
+        height: 320px; 
+        transition: 0s;
+
+    
+    
+    }
+
+}
+
+
+/* RWD動作 */
+.safe_station{
+
+    color: var(--bGreen) !important;
+
+}
+
+.dager_station{
+
+    color: var(--bRed)!important;
+
+}
+
+.notice_station{
+
+    color: var(--bYellow)!important;
+
+}
+
+.none_station{
+
+    color: var(--light_grey)!important;
+
+}
+
 .coverMove{
 
     width: 0%;
@@ -269,10 +658,7 @@ label{
 
 }
 
-.StationStepMove{
-  
-    width: 75%;
-}
+
 
 .SearchContentMove{
 
@@ -287,73 +673,6 @@ label{
 }
 
 @media (max-width: 767px) { 
-
-
-    #FindStationPage{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-    }
-
-    .FindStationCover{
-        width: 100%;
- 
-        height: 100vh;
-        /* height: 85px; */
-        background-image: url('../images/bg03.jpg');
-        background-size:cover;
-        background-position:-30px;
-        background-repeat: no-repeat;
-    
-    }
-
-    .FindStationBar{
-        width: 100%;
-    }
-
-
-    .FindStation_SearchWarp{
-        position: relative;
-        width: 100%;
-        height: calc(100vh - 165px);
-        display: flex;
-        flex-direction: column;
-
-    
-    }
-
-
-    .FindStationMap{
-        position: absolute;
-        width: 0%;
-        /* width: 100%; */
-        top: 50px;
-        left: 0;
-        height: 350px; 
-        background-color: #afa;
-    
-    
-    }
-
-    .StationSearchContent{
-        display: block;
-        /* display: none; */
-        width: 100%;
-        margin-top: 50px;
-        min-height: calc(100vh - 215px);
-        background-color: yellow;
-    }
-
-    .StationList{
-       
-        display: none;
-        /* display: block; */
-        margin-top: 400px;
-        width: 100%;
-        min-height: calc(100vh - 565px);
-        background-color: pink;
-    }
 
 
     .coverMove{
@@ -382,10 +701,7 @@ label{
         width: 100%;
     
     }
-    
-    .StationStepMove{
-        width: 100%;
-    }
+  
     
     .SearchContentMove{
     
@@ -444,7 +760,7 @@ label{
     display: flex;
     width: 75%;
     height: 100%;
-    /* background-color: cyan; */
+
 }
 .navbarItem{
     width: 25%;
@@ -537,7 +853,8 @@ label{
     left: 0;
     width: 100%;
     height: 85px;
-    background-color:transparent;
+    /* background-color:transparent; */
+    background-color:white;
     border-bottom: 1px solid var(--light_grey);
 
     
@@ -591,4 +908,22 @@ label{
     height: 80px;
     width: 100%;
     background-color: var(--bYellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.footer h5{
+
+
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+
+
 }

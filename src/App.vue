@@ -22,7 +22,7 @@
       
     </div>
     <div class="footer">
-
+      <h5>BikeFun © 2021 Designer Vum. Engineer JamesW. All rights reserved.</h5>
     </div>
 
 
@@ -72,7 +72,8 @@ export default {
     return{
 
       TPXData:[],
-      nowPage:'FindStation'
+      nowPage:'FindStation',
+     
     
      
 
@@ -81,7 +82,8 @@ export default {
     }
 
 
-  },computed:{
+  },
+  computed:{
 
 
     // PageNow(){
@@ -101,13 +103,7 @@ export default {
   ,methods:{
 
 
-    SearchStation(){
-
-      this.searchPage = ! this.searchPage
-
-      console.log( this.searchPage);
-
-    },
+  
     
 
     getdata(){
