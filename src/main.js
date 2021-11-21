@@ -21,6 +21,10 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import $ from 'jquery';
 window.$ = $;
 
+
+
+
+
 const jsSHA = require("jssha")
 const app = createApp(App);
 

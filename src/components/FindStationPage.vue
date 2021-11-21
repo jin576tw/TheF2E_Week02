@@ -36,17 +36,27 @@
                    
                 </div>
 
+                <transition name="fade">
 
-                <station-list-content v-if="searchPage"></station-list-content>
-                <station-search-content v-else :is-search-page="searchPage" 
-                @switch-search-page="SearchStation"></station-search-content >
+                    <station-list-content v-if="searchPage"
+                    
+                    ></station-list-content>
 
+                    <station-search-content v-else :is-search-page="searchPage" 
+                    :is-switch-active="switchActive"
+                    @switch-active="ActiveSwitch"
+                    @send-station-keyname="SearchStation"></station-search-content >
 
+                 </transition>
                 
 
               </div>
             
-              <div class="FindStationMap" :class="{StationMapMove:searchPage}" id="FindStationMap" ></div>
+
+             <find-station-map 
+             :is-search-page="searchPage">
+             </find-station-map>
+             
 
              
             
@@ -56,18 +66,26 @@
           </div>
 </template>
 
+
+
+
 <script>
+
 
 import StationSearchContent from './StationSearchContent.vue'
 import StationListContent from './StationListContent.vue'
+import FindStationMap from './FindStationMap.vue'
+
+
 
 export default {
 
     components:{
 
         'station-search-content':StationSearchContent,
-        'station-list-content': StationListContent
-
+        'station-list-content': StationListContent,  
+        'find-station-map':FindStationMap
+        
     },
  
     
@@ -75,20 +93,87 @@ export default {
 
         return{
             
-            searchPage : false
+            searchPage : false,
+
+            switchActive : true,
+
+            // 緯度
+            positon: [],
+
+            stationName : '',
+
+            stationKey : ''
+
         
         }
 
 
     },
+    
     methods:{
 
+        
 
-        SearchStation(){
+        ActiveSwitch(){
 
-            this.searchPage = ! this.searchPage
+            this.switchActive = ! this.switchActive
 
-            console.log( this.searchPage);
+            console.log( this.switchActive);
+
+            if(this.switchActive){
+
+                navigator.geolocation.getCurrentPosition(
+                    function (position) {
+
+                         const latitude = position.coords.latitude;  // 緯度
+
+                        const longitude = position.coords.longitude;  // 經度
+                       
+
+                        this.position = [latitude,longitude]
+                       
+                        console.log(latitude,longitude)
+                        console.log(this.position)
+
+                        
+           
+
+                    }
+            )
+                
+            }
+
+           
+
+        },
+
+
+       
+
+        SearchStation(name,keyname){
+
+
+            if(name == '' || keyname == ''){
+
+                alert('請輸入位置')
+
+            }else{
+
+
+                this.searchPage = ! this.searchPage
+
+                console.log( this.searchPage);
+
+                this.stationName = name
+
+                this.stationKey = keyname
+
+                console.log(this.stationName,this.stationKey)
+
+
+            }
+
+           
 
         },
 

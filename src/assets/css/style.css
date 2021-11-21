@@ -403,12 +403,15 @@ label{
 
 
 .AutoPosition_btn{
+    cursor: pointer;
     position: relative;
     display: flex;
     align-items: center;
     width: 120px;
-    height: 45px;
+    height: 45px; 
     background-color: var(--light_grey);
+    /* background-color:#A3C896 ; */
+   
     border-radius: 100px;
 
 }
@@ -416,13 +419,31 @@ label{
 .btn_switch{
     cursor: pointer;
     position: absolute;
-    right: 4px;
+
     width: 39px;
     height: 39px;
     border-radius: 100px;
     background-color: white;
+    transition:  0.5s ease-out;
+
+    transform: translateX(4px);
+    
+   
 }
 
+.active_position_btn{
+
+    background-color:#A3C896 !important;
+
+}
+
+.active_switch{
+
+    transform: translateX(75px);
+
+
+
+}
 
 .FindStaion_BtnWarp{
     margin-top: 40px;
@@ -584,7 +605,14 @@ label{
     transition: 0.8s;
     height: 100%;
     background-color: #afa;
+    overflow: hidden;
 
+
+}
+
+.StationMap{
+    min-width: 1440px;
+    height: 100%;
 
 }
 
@@ -926,4 +954,20 @@ label{
     text-align: center;
 
 
+}
+
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.8s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
 }
